@@ -1,3 +1,14 @@
+# my own custom rules
+*.mp4
+*.pickle
+*.png
+*.jpg
+*.jpeg
+*.zip
+*.tar.gz
+*.tar
+*.gz
+*.rar
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
