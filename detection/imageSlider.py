@@ -24,8 +24,7 @@ def cut_image(img,y,bucket):
 	for z in range(0,int(height/28)):
 		j = 0;
 		for x in range(0,int(width/28)):
-			#cv2.imwrite('./images/x'+str(index)+str(z)+str(x)+'.png',image[i:i+28,j:j+28])
-
+			cv2.imwrite('./Cropped_images/x'+str(index)+str(z)+str(x)+'.png',image[i:i+28,j:j+28])
 			#checking if the current piece/frame/chunk is all zero or not.if not, then take it
 			if(np.all(image[i:i+28,j:j+28]!=0)):
 				bkt.append(image[i:i+28,j:j+28])
@@ -37,11 +36,11 @@ def cut_image(img,y,bucket):
 
 
 
-cap = cv2.VideoCapture()
+cap = cv2.VideoCapture('test.mp4')
 cap.open(0)
 y = 0
 bucket = []
-
+frame_count=0
 
 while True:
 
@@ -62,8 +61,9 @@ while True:
 
 	#getting all the 'slided' pieces into a list i.e Bucket
 	bucket = cut_image(new_frame,y,bucket)
+	
 	y = y+1
-
+	frame_count= frame_count+1
 	#press 'q' to stop the video feed!!!!!!!
 	if cv2.waitKey(1) & 0xFF == ord('q'):
 		break
