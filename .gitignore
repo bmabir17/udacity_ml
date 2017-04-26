@@ -9,6 +9,9 @@
 *.tar
 *.gz
 *.rar
+#log dir
+*_log/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
