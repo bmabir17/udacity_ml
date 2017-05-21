@@ -1,0 +1,2 @@
+model_checkpoint_path: "Bangla_CNN"
+all_model_checkpoint_paths: "Bangla_CNN"

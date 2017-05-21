@@ -1,4 +1,7 @@
 # my own custom rules
+*.meta
+*.index
+*.data*
 *.mp4
 *.pickle
 *.png
